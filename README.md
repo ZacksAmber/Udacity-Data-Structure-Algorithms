@@ -10,9 +10,9 @@ This repository only contains the sample code, or my projects.
 
 ## [1. Introduction](./1)
 
-## [Data Structures](./2)
+## [2. Data Structures](./2)
 
-## [Basic Algorithms](./3)
+## [3. Basic Algorithms](./3)
 
-## [Advanced Algorithms](./4)
+## [4. Advanced Algorithms](./4)
 
