@@ -1,6 +1,6 @@
 def iloc(records, rows=':', cols=':') -> list:
     """A Pandas .iloc-like function.
-    
+
     Args:
         records (list): A 2-D list.
         rows (str or int): The indices of rows. Default is ':'.
@@ -81,11 +81,11 @@ def iloc(records, rows=':', cols=':') -> list:
     # Slice rows
     records = records[row_start:row_end]
     # Slice columns
-    if col_end == None:
+    if col_end is None:
         records = [record[col_start:col_end] for record in records]
     elif col_end - col_start != 1:
         records = [record[col_start:col_end] for record in records]
     else:
         records = [record[col_start] for record in records]
-    
+
     return records
