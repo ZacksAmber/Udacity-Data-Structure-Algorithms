@@ -4,5 +4,5 @@
 
 ## [6. Efficiency](./6)
 
-## [7. Project](/.7)
+## [7. Project: Unscramble Computer Science Problems](./7)
 
