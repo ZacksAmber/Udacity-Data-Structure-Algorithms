@@ -19,36 +19,57 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-from utils.iloc import iloc
+def total_durations():
+    """total_durations parses callings, receivings, and durations from .csv calls.
 
-def total_time():
-    durations = iloc(calls, ':', 3)
-    durations = [int(i) for i in durations]
-    callings = iloc(calls, ':', 0)
-    receivings = iloc(calls, ':', 1)
-    
-    nRecords = len(durations)
-    totalTime = {}
-    for i in range(nRecords):
-        '''
-        totalTime[callings[i]] += durations[i]
-        totalTime[receivings[i]] += durations[i]
-        '''
-        if callings[i] not in totalTime.keys():
-            totalTime[callings[i]] = durations[i]
-        else:
-            totalTime[callings[i]] += durations[i]
-        if receivings[i] not in totalTime.keys():
-            totalTime[receivings[i]] = durations[i]
-        else:
-            totalTime[receivings[i]] += durations[i]
-    return totalTime
-    
-totalTime = total_time()
-phone = max(totalTime, key=totalTime.get)
-duration = max(totalTime.values())
+    Returns:
+        dict: total duration for each phone number.
+    """
+    # Extract records
+    # Time Complexity: O(1) -> zip
+    # Time Complexity: O(n) -> zip to list
+    callings = list(zip(*calls))[0]
+    receivings = list(zip(*calls))[1]
+    durations = list(zip(*calls))[3]
 
-print(f"{phone} spent the longest time, {duration} seconds, on the phone during September 2016.")
+    # Convert durations from str to int
+    # Time Complexity: O(n)
+    durations = list(map(int, durations))
+
+    total_durations = {}
+    # Time Complexity: O(n)
+    for i in range(len(durations)):
+        # Time Complexity: O(1)
+        calling = callings[i]
+        receiving = receivings[i]
+        duration = durations[i]
+        phone_numbers = total_durations.keys()
+        # Add calling number duration
+        # Time Complexity: O(n)
+        if calling in phone_numbers:
+            # Time Complexity: O(1)
+            total_durations[calling] += duration
+        else:
+            # Time Complexity: O(1)
+            total_durations[calling] = duration
+        # Add receiving number duration
+        # Time Complexity: O(n)
+        if receiving in phone_numbers:
+            # Time Complexity: O(1)
+            total_durations[receiving] += duration
+        else:
+            # Time Complexity: O(1)
+            total_durations[receiving] = duration
+
+    return total_durations
+
+# Time Complexity: O(n)
+max_duration = max(total_durations().values())
+# Time Complexity: O(n)
+max_duration_number = max(total_durations(), key=total_durations().get)
+
+print(f"{max_duration_number} spent the longest time, {max_duration} seconds, on the phone during September 2016.")
+
 
 """Validation
 >>> import pandas as pd

@@ -33,7 +33,44 @@ Print the answer as part of a message:
 "The numbers called by people in Bangalore have codes:"
  <list of codes>
 The list of codes should be print out one per line in lexicographic order with no duplicates.
+"""
+def called_from_Bangalore():
+    """called_from_Bangalore prints the unique phone numbers called from Bangalore. 
+    """
+    # Extract records
+    # Time Complexity: O(1) -> zip
+    # Time Complexity: O(n) -> zip to list
+    callings = list(zip(*calls))[0]
+    receivings = list(zip(*calls))[1]
 
+    # Extract all of the Bangalore phone number index from callings
+    # Time Complexity: O(n)
+    idx = []
+    for i in range(len(callings)):
+        if '(080)' in callings[i]:
+            # Time Complexity: O(1)
+            idx.append(i)
+
+    # Extract all phone numbers from receivings match the index in idx
+    # Time Complexity: O(n)
+    called_from_Bangalore = [receivings[i] for i in idx]
+    # Use set to output unique phone numbers
+    # Time Complexity: O(n)
+    called_from_Bangalore = list(set(called_from_Bangalore))
+    # Sort
+    # Time Complexity: O(n log n)
+    called_from_Bangalore.sort()
+    # Output
+    # Time Complexity: O(n)
+    print("The numbers called by people in Bangalore have codes:")
+    for phone_number in called_from_Bangalore:  # 140
+        print(phone_number)
+
+
+called_from_Bangalore()
+
+
+"""
 Part B: What percentage of calls from fixed lines in Bangalore are made
 to fixed lines also in Bangalore? In other words, of all the calls made
 from a number starting with "(080)", what percentage of these calls
@@ -43,4 +80,60 @@ Print the answer as a part of a message::
 "<percentage> percent of calls from fixed lines in Bangalore are calls
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
+"""
+def called_to_Bangalore():
+    """called_from_Bangalore prints the unique phone numbers called from Bangalore. 
+    """
+    # Extract records
+    # Time Complexity: O(1) -> zip
+    # Time Complexity: O(n) -> zip to list
+    callings = list(zip(*calls))[0]
+    receivings = list(zip(*calls))[1]
+
+    # Extract all of the Bangalore phone number index from callings
+    # Time Complexity: O(n)
+    idx = []
+    for i in range(len(callings)):
+        if '(080)' in callings[i]:
+            # Time Complexity: O(1)
+            idx.append(i)
+
+    # Extract all phone numbers from receivings match the index in idx
+    # Time Complexity: O(n)
+    called_from_Bangalore = [receivings[i] for i in idx]
+    # Use set to output unique phone numbers
+    # Time Complexity: O(n)
+    count = 0
+    for phone_number in called_from_Bangalore:
+        if '(080)' in phone_number:
+            count += 1
+
+    # Sort
+    # Time Complexity: O(nlogn)
+    called_from_Bangalore.sort()
+    # Output
+    # O(1)
+    percentage = round(count / len(called_from_Bangalore), 2)
+    print(f"{percentage} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+
+called_to_Bangalore()
+
+
+"""Validation
+>>> import pandas as pd
+>>> df_calls = pd.read_csv('calls.csv', header=None)
+>>> df_calls.columns = ['calling', 'receiving', 'timestamp', 'duration']
+>>> filter = df_calls.calling.str.contains('(080)', regex=False)
+# len 140
+>>> called_from_Bangalore = list(df_calls[filter].receiving.unique())
+>>> called_from_Bangalore.sort()
+>>> for phone_number in called_from_Bangalore:
+    print(phone_number)
+>>> filter1 = df_calls.calling.str.contains('(080)', regex=False)
+>>> filter2 = df_calls.receiving.str.contains('(080)', regex=False)
+>>> called_to_Bangalore = df_calls[filter1 & filter2].receiving
+>>> called_from_Bangalore = list(df_calls[filter].receiving)
+>>> percentage = round(len(called_to_Bangalore) / len(called_from_Bangalore), 2)
+>>> print(percentage)
 """

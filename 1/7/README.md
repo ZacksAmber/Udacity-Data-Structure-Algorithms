@@ -6,8 +6,8 @@ Deconstruct a series of open-ended problems into smaller components (e.g, inputs
 
 ## Investigating Texts and Calls
 
-> [Original Files](./Original)
-> [My Solution](./Project)
+> [Original Files](./Original)<br>
+> [My Solutions](./Project)
 
 ---
 

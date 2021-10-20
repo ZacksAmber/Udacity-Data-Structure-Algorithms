@@ -18,11 +18,18 @@ How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
-from utils.iloc import iloc
+# Extract records
+# Time Complexity: O(1) -> zip
+# Time Complexity: O(n) -> zip to list
+records = list(zip(*texts))[0] + list(zip(*texts))[1] + list(zip(*calls))[0] + list(zip(*calls))[1]
 
-# Combine all phone numbers from csv texts and calls
-allPhoneNumbers = iloc(texts, ':', 0) + iloc(texts, ':', 1) + iloc(calls, ':', 0) + iloc(calls, ':', 1)
-print(f"There are {len(set(allPhoneNumbers))} different telephone numbers in the records.")
+# Use set to output unique records
+# Time Complexity: O(n)
+unique_records = set(records)
+
+# Time Complexity: O(len(unique_records))
+print(f"There are {len(unique_records)} different telephone numbers in the records.")
+
 
 """ # Validation
 >>> import pandas as pd
