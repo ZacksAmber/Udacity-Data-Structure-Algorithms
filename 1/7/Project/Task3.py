@@ -72,14 +72,15 @@ def called_from_Bangalore():
     # Use set to output unique phone numbers
     # Time Complexity: O(n)
     uniques = list(set(all_prefix_or_area_code))
+
     # Sort
     # Time Complexity: O(n log n)
-    uniques.sort()
-    # Output
+    # For loop
     # Time Complexity: O(n)
     print("The numbers called by people in Bangalore have codes:")
-    for i in uniques:
+    for i in sorted(uniques):
         print(i)
+
 
 called_from_Bangalore()
 
