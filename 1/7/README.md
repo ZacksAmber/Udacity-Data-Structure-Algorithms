@@ -63,20 +63,3 @@ Once you have completed your solution for each problem, perform a run time analy
 ### Step 4 - Check again Rubric and Submit
 
 Use the rubric to check your work before submission. A Udacity Reviewer will give feedback on your work based on this rubric and will leave helpful comments on your code.
-
----
-
-## Tasks
-
-### Task 0
-
-TASK 0:
-What is the first record of texts and what is the last record of calls?
-Print messages:
-"First record of texts, <incoming number> texts <answering number> at time <time>"
-"Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
-
----
-
-### Task 1
-
