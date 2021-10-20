@@ -1,0 +1,62 @@
+## Time Complexity (Worst Case Big-O Notation)
+
+> [Big-O Cheatsheet](http://bigocheatsheet.com/)<br>
+> [Python Complexities](https://wiki.python.org/moin/TimeComplexity)
+
+---
+
+### Task 0
+
+- The time complexity for Python `list` get item is `O(1)`.
+
+Therefore, the time complexity for each line is `O(1)`.
+
+---
+
+### Task 1
+
+- The time complexity for Python `zip` is `O(1)`.
+- The time complexity for Python `zip` to `list` is `O(n)`.
+- The time complexity for Python `set` is `O(n)`.
+- The time complexity for Python `len(set)` is `O(len(s))`.
+
+Therefore, the overall time complexity is `O(n)`.
+
+---
+
+### Task 2
+
+- The time complexity for Python `zip` is `O(1)`.
+- The time complexity for Python `zip` to `list` is `O(n)`.
+- The time complexity for Python `for` loops is `O(n)`.
+- The time complexity for Python `list` `in` is `O(n)`.
+- The time complexity for Python `list` `append()` is `O(1)`.
+- The time complexity for Python `list` `max()` is `O(n)`.
+
+Therefore, the overall time complexity is `O(n)`.
+
+---
+
+### Task 3
+
+- The time complexity for Python `zip` is `O(1)`.
+- The time complexity for Python `zip` to `list` is `O(n)`.
+- The time complexity for Python `for` loops is `O(n)`.
+- The time complexity for Python `list` `in` is `O(n)`.
+- The time complexity for Python `list` `append()` is `O(1)`.
+- The time complexity for Python `set` is `O(n)`.
+- The time complexity for Python `sort` is `O(n log n)`.
+
+Therefore, the overall time complexity is `O(n log n)`.
+
+---
+
+- The time complexity for Python `zip` is `O(1)`.
+- The time complexity for Python `zip` to `list` is `O(n)`.
+- The time complexity for Python `for` loops is `O(n)`.
+- The time complexity for Python `list` `in` is `O(n)`.
+- The time complexity for Python `list` `append()` is `O(1)`.
+- The time complexity for Python `set` is `O(n)`.
+- The time complexity for Python `sort` is `O(n log n)`.
+
+Therefore, the overall time complexity is `O(n log n)`.
