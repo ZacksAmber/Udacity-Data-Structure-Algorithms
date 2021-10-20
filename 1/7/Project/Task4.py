@@ -35,13 +35,10 @@ def telemarketers():
     sendings = list(zip(*texts))[0]
     receiving_texts = list(zip(*texts))[1]
     # Time Complexity: O(n)
-    no_callings = list(set(receiving_texts + sendings + receiving_calls))
+    no_callings = set(receiving_texts + sendings + receiving_calls)
     telemarketers = []
-    # Time Complexity: O(n)
-    for phone_number in list(set(callings)):
-        # Time Complexity: O(n)
-        if phone_number not in no_callings:
-            telemarketers.append(phone_number)
+    # Time Complexity: O(len(callings))
+    telemarketers = list(set(callings) - no_callings)
 
     # Time Complexity: O(n log n)
     telemarketers.sort() # len 43
