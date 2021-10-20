@@ -63,9 +63,12 @@ def called_from_Bangalore():
     for phone_number in called_from_Bangalore:
         prefix_or_area_code = re.findall(
             r'\(0\d.+\)|[789]\d+\s|^140', phone_number)[0]
-        # Remove the space in prefix, then append it to all_prefix_or_area_code
-        # Time Complexity: O(n)
-        all_prefix_or_area_code.append(prefix_or_area_code.split(' ')[0])
+        # The prefix is the first 4 digits of a phone_number.
+        # Time Complexity: O(3)
+        if re.match('^[789]', prefix_or_area_code):
+            # Time Complexity: O(4)
+            prefix_or_area_code = prefix_or_area_code[:4]
+        all_prefix_or_area_code.append(prefix_or_area_code)
     # Use set to output unique phone numbers
     # Time Complexity: O(n)
     uniques = list(set(all_prefix_or_area_code))
@@ -137,7 +140,9 @@ called_to_Bangalore()
 >>> df_calls.columns = ['calling', 'receiving', 'timestamp', 'duration']
 >>> filter = df_calls.calling.str.contains('(080)', regex=False)
 >>> all_prefix_or_area_code = df_calls[filter].receiving.str.findall(r'\(0\d.+\)|[789]\d+\s|^140')
->>> uniques = all_prefix_or_area_code.apply(lambda x: x[0].split(' ')[0]).sort_values().unique()
+>>> all_prefix_or_area_code = all_prefix_or_area_code.apply(
+    lambda x: x[0])  # Remove the list bracket
+>>> uniques = all_prefix_or_area_code.apply(lambda x: x[:4] if re.match('^[789]', x) else x).sort_values().unique()
 >>> for i in uniques:
             print(i)
 >>> filter1 = df_calls.calling.str.contains('(080)', regex=False)
