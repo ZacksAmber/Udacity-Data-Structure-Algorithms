@@ -32,17 +32,20 @@ def telemarketers():
     # Time Complexity: O(1) -> zip
     # Time Complexity: O(n) -> zip to list
     callings = list(zip(*calls))[0]
+    receiving_calls= list(zip(*calls))[1]
+    sendings = list(zip(*texts))[0]
+    receiving_texts = list(zip(*texts))[1]
+    # Time Complexity: O(n)
+    no_callings = list(set(receiving_texts + sendings + receiving_calls))
     telemarketers = []
     # Time Complexity: O(n)
-    for phone_number in callings:
+    for phone_number in list(set(callings)):
         # Time Complexity: O(n)
-        if re.findall('^140.+', phone_number) != []:
+        if phone_number not in no_callings:
             telemarketers.append(phone_number)
 
-    # Time Complexity: O(n)
-    telemarketers = list(set(telemarketers))
     # Time Complexity: O(n log n)
-    telemarketers.sort()
+    telemarketers.sort() # len 43
     print("These numbers could be telemarketers: ")
     # Time Complexity: O(n)
     for phone_number in telemarketers:
@@ -58,6 +61,9 @@ telemarketers()
 >>> df_texts.columns = ['sending', 'receiving', 'timestamp']
 >>> df_calls = pd.read_csv('calls.csv', header=None)
 >>> df_calls.columns = ['calling', 'receiving', 'timestamp', 'duration']
->>> filter = df_calls.calling.str.contains('[()\s]', regex=True) # len 100
->>> telemarketers = df_calls[~filter].calling.unique() # len 15
+>>> no_callings = df_texts.sending.to_list() + df_texts.receiving.to_list() + df_calls.receiving.to_list()
+>>> no_callings = list(set(no_callings))
+>>> filter = df_calls.calling.isin(no_callings)
+>>> telemarketers = df_calls[~filter].calling.sort_values().unique() # len 43
+>>> telemarketers
 """
