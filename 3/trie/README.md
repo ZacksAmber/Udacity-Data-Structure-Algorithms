@@ -1,0 +1,7 @@
+# Trie
+
+## Usage
+
+### [Spell Check](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/3/trie/trie_introduction.ipynb)
+
+Common applications of tries include storing a [predictive text](https://en.wikipedia.org/wiki/Predictive_text) or [autocomplete](https://en.wikipedia.org/wiki/Autocomplete "Autocomplete") dictionary and implementing approximate matching algorithms,[[8]](https://en.wikipedia.org/wiki/Trie#cite_note-8) such as those used in [spell checking](https://en.wikipedia.org/wiki/Spell_checking "Spell checking") and [hyphenation](https://en.wikipedia.org/wiki/Hyphenation_algorithm "Hyphenation algorithm")[[7]](https://en.wikipedia.org/wiki/Trie#cite_note-Liang1983-7) software. Such applications take advantage of a trie's ability to quickly search for, insert, and delete entries. However, if storing dictionary words is all that is required (i.e. there is no need to store metadata associated with each word), a minimal [deterministic acyclic finite state automaton](https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton "Deterministic acyclic finite state automaton") (DAFSA) or [radix tree](https://en.wikipedia.org/wiki/Radix_tree "Radix tree") would use less storage space than a trie. This is because DAFSAs and radix trees can compress identical branches from the trie which correspond to the same suffixes (or parts) of different words being stored.
