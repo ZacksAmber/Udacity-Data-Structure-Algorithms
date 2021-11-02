@@ -22,7 +22,6 @@
 
 ### [BST](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/4/04%20binary_search_tree.ipynb)
 
-
 ---
 
 ## Advanced

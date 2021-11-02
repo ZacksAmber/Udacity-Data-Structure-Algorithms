@@ -34,4 +34,6 @@
 
 ## Heap Sort
 
+### [Heapsort Introduction](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/3/sort/HeapSort.ipynb)
 
+<mark>Unfinished</mark>
