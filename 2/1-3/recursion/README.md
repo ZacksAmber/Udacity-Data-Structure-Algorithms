@@ -143,9 +143,109 @@ You must print these steps as follows:
 Where S = source, D = destination, A = auxiliary <br><br>
 An example illustration for `num_disks = 4` can be visualized in this [GIF from wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi#/media/File:Tower_of_Hanoi_4.gif)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20tower_of_Hanoi%28num_disks%29%3A%0A%20%20%20%20%22%22%22%0A%20%20%20%20%3Aparam%3A%20num_disks%20-%20number%20of%20disks%0A%20%20%20%20TODO%3A%20print%20the%20steps%20required%20to%20move%20all%20disks%20from%20source%20to%20destination%0A%20%20%20%20%22%22%22%0A%20%20%20%20tower_of_Hanoi_soln%28num_disks,%20'S',%20'A',%20'D'%29%0A%0Adef%20tower_of_Hanoi_soln%28num_disks,%20source,%20auxiliary,%20destination%29%3A%0A%20%20%20%20if%20num_disks%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%0A%20%20%20%20if%20num_disks%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20print%28f'%7Bsource%7D%20--%3E%20%7Bdestination%7D'%29%0A%20%20%20%20%20%20%20%20return%0A%20%20%20%20%0A%20%20%20%20tower_of_Hanoi_soln%28num_disks%20-%201,%20source,%20destination,%20auxiliary%29%0A%20%20%20%20print%28f'%7Bsource%7D%20--%3E%20%7Bdestination%7D'%29%0A%20%20%20%20tower_of_Hanoi_soln%28num_disks%20-%201,%20auxiliary,%20source,%20destination%29%0A%20%20%20%20%0Atower_of_Hanoi%283%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 <mark>Hard</mark>
 
 <mark>Unfinished</mark>
 
+---
+
+### [Return Codes](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Return-Codes.ipynb)
+
+In an encryption system where ASCII lower case letters represent numbers in the pattern `a=1, b=2, c=3...` and so on, find out all the codes that are possible for a given input number. 
+
+**Example 1**
+
+* `number = 123`
+* `codes_possible = ["aw", "abc", "lc"]`
+
+Explanation: The codes are for the following number:
+         
+* 1 . 23     = "aw"
+* 1 . 2 . 3  = "abc"
+* 12 . 3     = "lc"
+    
+
+**Example 2**  
+
+* `number = 145`
+* `codes_possible = ["ade", "ne"]`
+
+Return the codes in a list. The order of codes in the list is not important.
+
+*Note: you can assume that the input number will not contain any 0s*
+
+<mark>Hard</mark>
+
+---
+
+### [Return Subsets](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Return-Subsets.ipynb)
+
+Given an integer array, find and return all the subsets of the array.
+The order of subsets in the output array is not important. However the order of elements in a particular subset should remain the same as in the input array.
+
+**Note**: 
+- An empty set will be represented by an empty list.
+- If there are repeat integers, each occurrence must be treated as a separate entity.
+
+**Example 1**
+
+```
+arr = [9, 9]
+
+output = [[],
+          [9],
+          [9],
+          [9, 9]]
+```
+
+**Example 2**
+
+```
+arr = [9, 12, 15]
+
+output =  [[],
+           [15],
+           [12],
+           [12, 15],
+           [9],
+           [9, 15],
+           [9, 12],
+           [9, 12, 15]]
+```
+
+---
+
+### [Staircase](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Staircase.ipynb)
+
+Suppose there is a staircase that you can climb in either 1 step, 2 steps, or 3 steps. In how many possible ways can you climb the staircase if the staircase has `n` steps? Write a recursive function to solve the problem.
+
+**Example:**
+
+* `n == 1` then `answer = 1`
+
+* `n == 3` then `answer = 4`<br>
+   The output is `4` because there are four ways we can climb the staircase:
+    - 1 step +  1 step + 1 step
+    - 1 step + 2 steps 
+    - 2 steps + 1 step
+    - 3 steps
+* `n == 5` then `answer = 13`
+
+> [Mathematical induction](https://en.wikipedia.org/wiki/Mathematical_induction#Description)
+
+> [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+> [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+> [1137. N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)
+
+---
+
+### [Last Index](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Last-index-recursion.ipynb)
+
+Given an array `arr` and a target element `target`, find the last index of occurence of `target` in `arr` using recursion. If `target` is not present in `arr`, return `-1`.
+
+For example:
+
+1. For `arr = [1, 2, 5, 5, 1, 2, 5, 4]` and `target = 5`, `output = 6`
+
+2. For `arr = [1, 2, 5, 5, 1, 2, 5, 4]` and `target = 7`, `output = -1`
