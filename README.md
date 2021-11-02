@@ -4,7 +4,7 @@
 
 > [Udacity Data Structure & Algorithms Nanodegree](https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256)
 
-This repository only contains the sample code, or my projects.
+This repository only contains the sample code or my projects.
 
 ---
 
