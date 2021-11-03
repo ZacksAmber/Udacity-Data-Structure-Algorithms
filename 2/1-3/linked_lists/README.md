@@ -91,8 +91,6 @@ You have to retain the first `i` nodes and then delete the next `j` nodes. Conti
 
 ### [Swap Nodes](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/linked_lists/Swap-Nodes.ipynb)
 
-<mark>Unfinished</mark>
-
 Given a linked list, swap the two nodes present at position `i` and `j`, assuming `0 <= i <= j`. The positions are based on 0-based indexing.
 
 **Note:** You have to swap the nodes and not just the values. 
