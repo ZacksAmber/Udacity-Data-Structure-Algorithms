@@ -1,5 +1,11 @@
 # Stack
 
+## Referencecs
+
+> [How to Implement a Python Stack](https://realpython.com/how-to-implement-python-stack/)
+
+---
+
 ## Basic
 
 ### [Implement a Stuck Using an Array](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/Implement%20a%20stack%20using%20an%20array.ipynb)
@@ -12,7 +18,7 @@
 
 ---
 
-### [Building a Stack in Python(Python List)](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/python_stack_practice.ipynb)
+### [Implement a stack using a Python List](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/python_stack_practice.ipynb)
 
 ---
 
@@ -26,6 +32,14 @@
 ---
 
 ## Advanced
+
+### [Implement a stack using a deque](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/Implement%20a%20stack%20using%20a%20deque.ipynb)
+
+---
+
+### [Implement a stack using a LifoQueue](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/Implement%20a%20stack%20using%20a%20LifoQueue.ipynb)
+
+---
 
 ### [Practice: Balanced Parentheses(Python List)](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/stack/Balanced%20Parentheses%20Exercise%20-%20Stacks.ipynb)
 
