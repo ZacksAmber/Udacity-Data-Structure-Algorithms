@@ -36,19 +36,19 @@ The goal of this exercise is to use recursion to write a function `is_palindrome
 
 ### [List Permutation](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Permutation.ipynb)
 
-<mark>Hard</mark>
+**Hard**
 
 ---
 
 ### [String Permutation](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/String-Permutations.ipynb)
 
-<mark>Hard</mark>
-
-<mark>Unfinished</mark>
+**Hard**
 
 ---
 
 ### [Keypad Combinations](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Keypad%20Combinations.ipynb)
+
+**Hard**
 
 A keypad on a cellphone has alphabets for all numbers between 2 and 9, as shown in the figure below:
 
@@ -69,10 +69,6 @@ Likewise, if the user types 32, the order would be
 Given an integer `num`, find out all the possible strings that can be made using digits of input `num`. 
 Return these strings in a list. The order of strings in the list does not matter. However, as stated earlier, the order of letters in a particular string matters.
 
-<mark>Hard</mark>
-
-<mark>Unfinished</mark>
-
 ---
 
 ### [Deep Reverse](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Deep%20Reverse.ipynb)
@@ -92,7 +88,6 @@ Output: `[5, 4, [5, 4, 3], 2, 1]`<br>
  * If an item in the list is a list itself, call the same function.
  * Otheriwse, append the item to the final list.
 
-
 ---
 
 ### [Call stack](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Call%20stack.ipynb)
@@ -106,6 +101,10 @@ Binary Search
 ---
 
 ### [Tower of Hanoi](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/recursion/Tower-of-Hanoi.ipynb)
+
+<mark>Hard</mark>
+
+<mark>Unfinished</mark>
 
 The Tower of Hanoi is a puzzle where we have three rods and `n` unique sized disks. The three rods are - source, destination, and auxiliary as shown in the figure below.
 <br><img style="float: center;" src="TOH.png" alt="Image of 3 rod with all disks on the leftmost tower and instructions to move them to the rightmost tower."><br>
@@ -142,11 +141,6 @@ You must print these steps as follows:
         
 Where S = source, D = destination, A = auxiliary <br><br>
 An example illustration for `num_disks = 4` can be visualized in this [GIF from wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi#/media/File:Tower_of_Hanoi_4.gif)
-
-
-<mark>Hard</mark>
-
-<mark>Unfinished</mark>
 
 ---
 

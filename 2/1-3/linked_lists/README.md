@@ -105,3 +105,8 @@ Given a linked list, swap the two nodes present at position `i` and `j`, assumin
 * The node at position 4 has the value `6`
 * Swapping these nodes will result in a final order of nodes of `3 4 5 6 2 1 9`
 
+---
+
+### [Create a sorted linked list Exercise](https://github.com/ZacksAmber/Udacity-Data-Structure-Algorithms/blob/main/2/1-3/linked_lists/Create%20a%20sorted%20linked%20list%20Exercise.ipynb)
+
+**Unfinished**
